@@ -14,7 +14,6 @@ public class ParisMetro {
 	/**
 	 * Reading the file and producing a graph.  
 	 */
-	
 	public static void readMetro(String fileName) {
 		graph = new Metro();
 		
@@ -41,15 +40,13 @@ public class ParisMetro {
 				}
 			}
 
-			// reading the symbol $ signaling the end of the list of stations 
-			
+			// reading the symbol $ signaling the end of the list of stations 		
 			line = br.readLine();
 			if (!line.equals("$")) {
 				System.err.println("File format error!");
 			}
 			
-			// reading the edges
-			
+			// reading the edges		
 			for (int i = 0; i < numEdges; i++) {
 				line = br.readLine();
 				try (Scanner lineScanner = new Scanner(line)) {
